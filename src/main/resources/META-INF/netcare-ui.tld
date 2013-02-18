@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2012 Callista Enterprise AB <info@callistaenterprise.se>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+	      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	      xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	      version="2.0">
+	<description>Callista Software - Netcare UI Tag Library</description>
+	<display-name>Callista Software - Netcare UI Library</display-name>
+	<tlib-version>1.0</tlib-version>
+	<short-name>netcare-ui</short-name>
+	<uri>http://www.callistasoftware.org/netcare/tags</uri>
+	
+	<tag-file>
+		<name>block-message</name>
+		<path>/META-INF/tags/block-message.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>col</name>
+		<path>/META-INF/tags/col.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>dateInput</name>
+		<path>/META-INF/tags/dateInput.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>field</name>
+		<path>/META-INF/tags/field.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>image</name>
+		<path>/META-INF/tags/image.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>js</name>
+		<path>/META-INF/tags/js.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>message</name>
+		<path>/META-INF/tags/message.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>modal</name>
+		<path>/META-INF/tags/modal.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>row</name>
+		<path>/META-INF/tags/row.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>table</name>
+		<path>/META-INF/tags/table.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>timeInput</name>
+		<path>/META-INF/tags/timeInput.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>css</name>
+		<path>/META-INF/tags/css.tag</path>
+	</tag-file>
+</taglib>
