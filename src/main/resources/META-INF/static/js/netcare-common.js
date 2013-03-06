@@ -133,6 +133,18 @@ NC = {
 			return (value.match(/^-?\d+(?:\.\d+)?$/));
 		};
 
+        /*
+            Validate dates according to the ISO format yyyy-MM-dd.
+         */
+        my.isValidISODate = function(value) {
+            var comp = value.split('-');
+            var yyyy = parseInt(comp[0], 10);
+            var mm = parseInt(comp[1], 10);
+            var dd = parseInt(comp[2], 10);
+            var date = new Date(yyyy,mm-1,dd);
+            return (date.getFullYear() == yyyy && date.getMonth() + 1 == mm && date.getDate() == dd);
+        };
+
 		my.validateTimeField = function(timeField, callback) {
             var self = this;
             timeField.keypress(function(event) {
