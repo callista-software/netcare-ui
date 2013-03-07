@@ -145,6 +145,26 @@ NC = {
             return (date.getFullYear() == yyyy && date.getMonth() + 1 == mm && date.getDate() == dd);
         };
 
+        /*
+            Creates a date object from an ISO formatted string.
+         */
+        my.getDateFromISOString = function(value) {
+            var comp = value.split('-');
+            var yyyy = parseInt(comp[0], 10);
+            var mm = parseInt(comp[1], 10);
+            var dd = parseInt(comp[2], 10);
+            return new Date(yyyy,mm-1,dd);
+        };
+
+        /*
+            Returns true if the dates are on the same day.
+         */
+        my.isSameDay = function(date1, date2) {
+            return ((date1.getFullYear()==date2.getFullYear())
+                        &&(date1.getMonth()==date2.getMonth())
+                        &&(date1.getDate()==date2.getDate()));
+        };
+
 		my.validateTimeField = function(timeField, callback) {
             var self = this;
             timeField.keypress(function(event) {
