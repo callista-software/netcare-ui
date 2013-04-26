@@ -26,3 +26,4 @@
 <script type="text/javascript" src="<c:url value='${resourcePath}/js/netcare-ui/Util.js' />"></script>
 <script type="text/javascript" src="<c:url value='${resourcePath}/js/netcare-ui/PageMessages.js' />"></script>
 <script type="text/javascript" src="<c:url value='${resourcePath}/js/netcare-ui/Ajax.js' />"></script>
+<!--[if lte IE 7]><script type="text/javascript" src="<c:url value='${resourcePath}/js/json2.js' />"></script><![endif]-->
