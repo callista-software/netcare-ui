@@ -128,10 +128,18 @@ NC = {
 		 *  +1.2: no
 		 *    .2: no
 		 *   1. : no
+         *
+         *   Also added the possibility to accept comma instead of dot.
+         *
 		 */
-		my.isDecimalNumber = function(value) {
-			return (value.match(/^-?\d+(?:\.\d+)?$/));
+		my.isDecimalNumber = function(value, acceptComma) {
+            if(acceptComma) {
+                return (value.match(/^-?\d+(?:[\.\,]{1}\d+)?$/));
+            } else {
+                return (value.match(/^-?\d+(?:\.\d+)?$/));
+            }
 		};
+
 
         /*
             Validate dates according to the ISO format yyyy-MM-dd.
