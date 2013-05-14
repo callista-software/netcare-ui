@@ -24,19 +24,32 @@ _.templateSettings = {
 $(document).ready(function() {
 	//Initialize all date pickers
 	$('.dateInput').each(function(i, v) {
-		
-		var opts = {
-			dateFormat : 'yy-mm-dd',
-			firstDay : 1
-		}
-		
-		if ( $(this).hasClass('allow-previous') ) {
-			
-		} else {
-			opts.minDate = +0;
-		}
-		
-		$(v).datepicker(opts);
+
+    var opts = {
+      dateFormat : 'yy-mm-dd',
+      firstDay : 1
+    }
+
+
+    // Check which classes we have to determine
+    // max and min dates for the picker
+    var classes = $(this).attr('class');
+    var classArray = classes.split(' ');
+
+    $.each(classArray, function (i, val) {
+
+      // Check how many previous days to display
+      if (val.indexOf('previous') == 0) {
+        opts.minDate = -Math.abs(parseInt(val.split('-')[1], 10));
+      }
+
+      if (val.indexOf('upcoming') == 0) {
+        opts.maxDate = val.split('-')[1];
+      }
+
+    });
+
+    $(v).datepicker(opts);
 		
 	});
 	
